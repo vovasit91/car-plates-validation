@@ -219,9 +219,9 @@ class CarNumberRule implements Rule
      */
     public function message()
     {
-        if (array_key_exists('your-word-key', trans('validation.custom.number.custom_patterns'))) {
+        if (\Lang::has('validation.custom.number.custom_patterns')) {
             return trans('validation.custom.number.custom_patterns');
         }
-        return 'car plate is in wrong format';
+        return 'Car plate is in wrong format';
     }
 }
